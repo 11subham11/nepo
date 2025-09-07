@@ -5,33 +5,34 @@ import { LineChart, Bell } from "lucide-react";
 import "./globals.css";
 
 const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-	title: "nepo",
-	description: "A minimal social app",
+  title: "nepo",
+  description: "A minimal social app",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-50 text-zinc-900`}>
-				<header className="border-b bg-white sticky top-0 z-10">
+  return (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-50 text-zinc-900`}
+      >
+        {/* <header className="border-b bg-white sticky top-0 z-10">
 					<div className="mx-auto max-w-3xl px-4 py-3 flex items-center gap-4">
 						<Link href="/" className="flex items-center gap-2 font-semibold">
 							<LineChart className="h-5 w-5 text-zinc-900" />
-							{/* <span>nepo</span> */}
 						</Link>
 						<nav className="ml-auto flex items-center gap-4 text-sm">
 							<Link href="/">Home</Link>
@@ -42,11 +43,9 @@ export default function RootLayout({
 							</button>
 						</nav>
 					</div>
-				</header>
-				<main className="mx-auto max-w-3xl px-4 py-6 min-h-screen">
-					{children}
-				</main>
-			</body>
-		</html>
-	);
+				</header> */}
+        <main className="min-h-screen">{children}</main>
+      </body>
+    </html>
+  );
 }
